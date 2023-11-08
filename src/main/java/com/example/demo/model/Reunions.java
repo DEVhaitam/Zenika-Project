@@ -17,12 +17,12 @@ public class Reunions {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    private Integer start_hour;
-    private Integer end_hour;
+    private Integer starthour;
+    private Integer endhour;
 
     @Enumerated(EnumType.STRING)
-    private TypeReunion typeReunion;
+    private TypeReunion typereunion;
 
-    private Integer nbre_personnes;
+    private Integer nbrepersonnes;
 
 }

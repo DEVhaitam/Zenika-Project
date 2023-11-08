@@ -7,6 +7,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import javax.persistence.Column;
 import javax.persistence.criteria.CriteriaBuilder;
 
 @NoArgsConstructor
@@ -16,10 +17,13 @@ import javax.persistence.criteria.CriteriaBuilder;
 @Table
 public class Salles {
     @Id
-    private String nom_salle;
+    private String nomsalle;
 
-    private Integer capaciteMax;
-    private Integer capaciteEffective;
+
+    private Integer capacitemax;
+
+
+    private Integer capaciteeffective;
     private Integer disponibilite;
 
     private Integer NEANT;
