@@ -13,13 +13,17 @@ import java.util.List;
 public class ZenikaApplication {
 
 	public static void main(String[] args) {
+		SpringApplication.run(ZenikaApplication.class, args);
+		/*
+		This part was made just to check the functionality of the APIservice
+
 		ApplicationContext applicationContext = SpringApplication.run(ZenikaApplication.class, args);
 		APIservices apIservices = applicationContext.getBean(APIservices.class);
 		//System.out.println(apIservices.salleParNbrePersonnes(3));
 		//apIservices.reserverSalle("E3004");
 		List<Salles> salles = apIservices.sallesDisponibles();
 		for(Salles salle:salles) System.out.println(salle.getNomsalle());
-
+		 */
 	}
 
 }
