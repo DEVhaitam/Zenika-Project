@@ -18,8 +18,8 @@ public class Salles {
     @Id
     private String nom_salle;
 
-    private Integer capacite_max;
-    private Integer capacite_effective;
+    private Integer capaciteMax;
+    private Integer capaciteEffective;
     private Integer disponibilite;
 
     private Integer NEANT;
