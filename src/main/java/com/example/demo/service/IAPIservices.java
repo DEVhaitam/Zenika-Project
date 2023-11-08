@@ -13,4 +13,7 @@ public interface IAPIservices {
       public void libererSalle(String nomSalle);
 
       public List<Salles> sallesDisponibles();
+
+      public List<Salles> sallesDispoParNbrePersonnes(int nbrePersonnes);
+      public List<Salles> sallesDispoParTypeReunion(TypeReunion reunion);
 }

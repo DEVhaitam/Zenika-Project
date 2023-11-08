@@ -22,6 +22,16 @@ public class APIController {
         return apIservices.sallesDisponibles();
     }
 
+    @GetMapping("/disponibles/nbrePersonnes")
+    List<Salles> sallesDispoParNbrePersonnes(@RequestParam(value = "nbrePersonnes") int nbrePersonnes){
+        return apIservices.sallesDispoParNbrePersonnes(nbrePersonnes);
+    }
+
+    @GetMapping("/disponibles/reunion")
+    List<Salles> sallesDispoParTypeReunion(@RequestParam(value = "reunion") TypeReunion reunion){
+        return apIservices.sallesDispoParTypeReunion(reunion);
+    }
+
     @GetMapping("/nbrePersonnes/{nbrePersonnes}")
     List<Salles> sallesParNbrePersonnes(@PathVariable(value = "nbrePersonnes") int nbrePersonnes){
         return apIservices.sallesParNbrePersonnes(nbrePersonnes);

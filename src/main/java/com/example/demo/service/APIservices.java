@@ -74,4 +74,29 @@ public class APIservices implements IAPIservices{
     public List<Salles> sallesDisponibles() {
         return salleRepository.findByDisponibilite(1);
     }
+
+    /*
+    there are two approaches to write this method
+    1st: create the personalized request in the SallesRepository interface
+    2nd: reuse the result of the sallesParNbrePersonnes method
+    */
+
+    @Override
+    public List<Salles> sallesDispoParNbrePersonnes(int nbrePersonnes){
+        return salleRepository.findByDisponibiliteAndCapaciteeffectiveGreaterThanEqual(1,nbrePersonnes);
+    }
+
+    /*
+    this time I have used the 2nd approach
+    It's not the very optimum, but it's just for illustrative reasons
+     */
+    @Override
+    public List<Salles> sallesDispoParTypeReunion(TypeReunion reunion){
+        List<Salles> salles = sallesParTypeReunion(reunion);
+        List<Salles> result = new ArrayList<>();
+        for(Salles salle:salles){
+            if(salle.getDisponibilite().equals(1)) result.add(salle);
+        }
+        return result;
+    }
 }

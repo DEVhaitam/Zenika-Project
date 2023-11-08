@@ -14,4 +14,6 @@ public interface SallesRepository extends JpaRepository<Salles,String> {
        public List<Salles> findByNEANTAndCapaciteeffectiveGreaterThanEqual(Integer n, Integer c);
 
        public List<Salles> findByDisponibilite(Integer i);
+
+       public List<Salles> findByDisponibiliteAndCapaciteeffectiveGreaterThanEqual(Integer d,Integer c);
 }
