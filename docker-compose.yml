@@ -27,7 +27,8 @@ services:
       - mynet
 
   zenikaapp:
-    build: .
+    image: haitamelhayani2002/zenika
+    #build: .
     depends_on:
       - mysql-db
     ports:
