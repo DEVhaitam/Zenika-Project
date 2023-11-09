@@ -26,6 +26,16 @@ services:
     networks:
       - mynet
 
+  zenikaapp:
+    build: .
+    depends_on:
+      - mysql-db
+    ports:
+      - "8091:8091"
+    networks:
+      - mynet
+
+
 volumes:
   db_data:
 networks:
