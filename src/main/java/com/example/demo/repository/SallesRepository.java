@@ -12,8 +12,6 @@ public interface SallesRepository extends JpaRepository<Salles,String> {
        public List<Salles> findByECRANAndPIEUVREAndWEBCAM(Integer e,Integer p,Integer w);
        public List<Salles> findByTABLEAUAndECRAN(Integer t, Integer e);
        public List<Salles> findByNEANTAndCapaciteeffectiveGreaterThanEqual(Integer n, Integer c);
-
        public List<Salles> findByDisponibilite(Integer i);
-
        public List<Salles> findByDisponibiliteAndCapaciteeffectiveGreaterThanEqual(Integer d,Integer c);
 }
